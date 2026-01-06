@@ -7,7 +7,11 @@ import Task from './models/Task.js'; // Updated import
 dotenv.config();
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://task-master-frontend-w7ai.vercel.app/', // <-- Replace with YOUR Vercel URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL)
