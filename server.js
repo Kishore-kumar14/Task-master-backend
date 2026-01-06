@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://task-master-frontend-w7ai.vercel.app/', // <-- Replace with YOUR Vercel URL
+  origin: 'https://task-master-frontend-w7ai.vercel.app', // <-- Replace with YOUR Vercel URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type']
 }));
