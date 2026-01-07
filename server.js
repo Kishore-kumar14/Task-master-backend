@@ -31,7 +31,8 @@ app.post("/tasks", async (req, res) => {
   try {
     const task = new Task({ 
       text: req.body.text,
-      priority: req.body.priority || 'medium' 
+      priority: req.body.priority || 'medium' ,
+      dueDate: req.body.dueDate
     });
     await task.save();
     res.json(task);
